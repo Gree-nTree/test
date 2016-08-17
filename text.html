@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en" onclick="init(event)">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+  function init(e)
+  {
+  var imgObj=document.createElement("img");
+  document.body.appendChild(imgObj);
+  imgObj.src="img/星星.jpg";
+  var width=getRandom(15,85);
+  imgObj.width=width;
+  var x=e.clientX;
+  var y=e.clientY;
+  imgObj.style.position="absolute";
+  imgObj.style.left=x-width/2+"px";
+  imgObj.style.top=y-width/2+"px";
+  }
+
+  function getRandom(min,max)
+  {
+	var random=Math.random()*(max-min)+min;
+	random=Math.floor(random);
+	return random;
+  }
+  </script>
+ </head>
+ <body bgColor="#000">
+  
+ </body>
+</html>
